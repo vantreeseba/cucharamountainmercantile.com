@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   // Global data for root URL
   eleventyConfig.addGlobalData(
     'rootURL',
-    'https://vantreeseba.github.io/cucharamountainmercantile.com/',
+    'https://vantreeseba.github.io/cucharamountainmercantile.com',
   );
 
   // lazyImages and Files Minifier
