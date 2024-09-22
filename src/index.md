@@ -4,7 +4,7 @@ title: Cuchara Mountain Mercantile
 description:
 keyword:
 author:
-cover: /asset/index/cover.webp
+cover: /asset/index/MercantileLogo_1.jpg
 ---
 
 #### Cuchara Mountian Mercantile
