@@ -29,33 +29,8 @@
   <!-- lazyimages -->
   <script src="/asset/js/lazysizes.min.js"></script>
 </head>
-<body class="bg-base-200">
-  <div class="sm:hero min-h-screen">
+<body class="bg-gray-900 text-slate-400">
+  <div class="min-h-screen">
     {{ content }}
   </div>
-  <!-- share modal -->
-  <dialog id="share" class="modal">
-    <div class="modal-box">
-      <div role="alert" class="alert mb-4">
-        <span>Your system does not support web share API. Please press the copy button below.</span>
-      </div>
-      <div class="flex items-center">
-        <input
-          type="text"
-          id="share-url"
-          value="{{ rootURL }}{{ page.url }}"
-          class="input input-bordered w-full mr-4"
-          aria-label="link"
-          disabled/>
-        <button 
-          class="btn btn-primary" 
-          onclick="copyToClipboard()">
-          Copy
-        </button>
-      </div>
-    </div>
-    <form method="dialog" class="modal-backdrop">
-      <button>close</button>
-    </form>
-  </dialog>
 </body>

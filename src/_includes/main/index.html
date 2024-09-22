@@ -1,24 +1,24 @@
 ---
 layout: main/base.html
 ---
-<div class="sm:container m-0 p-0 sm:mx-auto sm:p-4 md:p-10">
-	<div class="the-card">
+<div class="sm:container m-0 p-0 mx-auto sm:p-4 md:p-10">
+	<div class="rounded-xl bg-slate-300 shadow-xl w-full md:max-w-3xl mx-auto min-h-screen sm:min-h-min flex flex-col sm:flex-none">
     <!-- cover -->
-    <figure>
-      <img src="{{ cover }}" alt="cover" />
-    </figure>
+    <img src="{{ cover }}" alt="cover" class="rounded-t-xl" />
     <!-- content -->
     <div class="flex-grow">
-      <div class="card-body pt-4 tn:pt-8">
+      <div class="tn:pt-8 p-4">
         <div class="w-full">
-          <div class="prose md:prose-lg max-w-none">
+          <article class="prose prose-xl prose-slate md:prose-lg max-w-none">
             {{ content }}
-          </div>
+          </article>
         </div>
       </div>
     </div>
     <!-- Footer credit -->
+    <div class="bg-slate-600">
     {% include "footer/footer-social.html" %}
+    </div>
     <div class="text-center py-4">
       {% include "footer/footer-credit.html" %}
     </div>

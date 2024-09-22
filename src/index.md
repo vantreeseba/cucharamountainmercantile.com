@@ -11,4 +11,4 @@ cover: /asset/index/MercantileLogo_1.jpg
 
 We are open for business.
 
-We have a Deli/Store and an Event Center for weddings and other events.
+We have a [deli](/deli) and an Event Center for [weddings](/weddings/) and other events.
