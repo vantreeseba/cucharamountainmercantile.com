@@ -30,7 +30,7 @@ module.exports = function (eleventyConfig) {
       input: 'src',
       includes: '_includes',
       data: '_data',
-      output: '_site',
+      output: 'docs',
     },
   };
 };
