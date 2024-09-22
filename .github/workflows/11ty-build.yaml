@@ -12,7 +12,7 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Run npm build
-        run: npm run build:prod
+        run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
