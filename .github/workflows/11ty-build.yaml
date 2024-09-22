@@ -1,0 +1,39 @@
+name: Eleventy Build
+on: [push, workflow_dispatch]
+
+permissions:
+  actions: read
+  attestations: read
+  checks: write
+  contents: write
+  deployments: write
+  issues: read
+  packages: read
+  pages: write
+  pull-requests: read
+  repository-projects: read
+  security-events: read
+  statuses: write
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install packages
+        run: npm ci
+      - name: Run npm build
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          email: vantreeseba@gmail.com
+          build_dir: _site               
+          branch: gh-pages              
+          cname: cucharamountainmercantile.com            
+          jekyll: no                    
