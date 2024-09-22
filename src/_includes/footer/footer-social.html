@@ -1,0 +1,16 @@
+<footer class="footer bg-base-200 text-neutral-content items-center p-8 border-x-4 border-base-100">
+  <aside>
+    <div class="prose">
+      <blockquote class="text-sm">
+        <i>Check us out on social media:</i>
+      </blockquote>
+    </div>
+  </aside>
+  <nav class="gap-4 grid-flow-col md:place-self-center md:justify-self-end">
+    {% for item in social.items %}
+      <a class="text-base-content hover:text-primary" href="{{ item.url }}" aria-label="{{ item.aria-label }}">
+        {% icon item.name %}
+      </a>
+    {% endfor %}
+  </nav>
+</footer>
