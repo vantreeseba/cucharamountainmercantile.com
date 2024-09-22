@@ -13,9 +13,13 @@ jobs:
         run: npm ci
       - name: Run npm build
         run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          publish_dir: _site
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          email: username@domain.tld
+          build_dir: _site               
+          branch: gh-pages              
+          cname: cucharamountainmercantile.com            
+          jekyll: no                    
