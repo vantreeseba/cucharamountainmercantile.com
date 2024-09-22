@@ -8,6 +8,12 @@ module.exports = function (eleventyConfig) {
     showAllHosts: true,
   });
 
+  // Global data for root URL
+  eleventyConfig.addGlobalData(
+    'rootURL',
+    'https://vantreeseba.github.io/cucharamountainmercantile.com/',
+  );
+
   // lazyImages and Files Minifier
   eleventyConfig.addPlugin(lazyImagesPlugin, {
     appendInitScript: false, // Menonaktifkan penyertaan otomatis script lazysizes dari CDN
